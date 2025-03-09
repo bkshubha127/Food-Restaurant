@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flavour Heaven Restaurant</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    <!-- Header -->
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Flavour Heaven</div>
+                <div class="nav-links">
+                    <a href="index.html" class="active">Home</a>
+                    <a href="#menu">Menu</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="auth-buttons">
+                    <button class="login-btn" id="loginButton">Login</button>
+                    <button class="cart-btn" id="cartButton">
+                        <span>Cart</span>
+                        <span id="cartCount">(0)</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>Delicious Food, Delivered to You</h1>
+                <p>Experience the finest dining with our carefully crafted dishes made from fresh, locally sourced ingredients.</p>
+                <button class="cta-btn" id="orderNowBtn">Order Now</button>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="container">
+            <h1 class="section-title">Our Menu</h1>
+            <div class="menu-container" id="menuContainer">
+                <!-- Menu items will be added here via JavaScript -->
+            </div>
+        </section>
+
+        <!-- Cart Section -->
+        <section id="cartSection" class="container cart-section">
+            <h2 class="section-title">Your Cart</h2>
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be added here via JavaScript -->
+            </div>
+            <div class="cart-total" id="cartTotal">Total: ₹0.00</div>
+            <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+            <div class="clearfix"></div>
+        </section>
+
+        <!-- Order Section -->
+        <section id="orderSection" class="container order-section">
+            <h2 class="section-title">Complete Your Order</h2>
+            <form class="order-form" id="orderForm">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" required>
+                </div>
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" required>
+                </div>
+                <div class="form-group">
+                    <label for="paymentMethod">Payment Method</label>
+                    <select id="paymentMethod" required>
+                        <option value="">Select Payment Method</option>
+                        <option value="credit">Credit Card</option>
+                        <option value="debit">Debit Card</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="cash">Cash on Delivery</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="deliveryTime">Preferred Delivery Time</label>
+                    <input type="time" id="deliveryTime" required>
+                </div>
+                <div class="form-group full-width">
+                    <label for="specialInstructions">Special Instructions</label>
+                    <textarea id="specialInstructions"></textarea>
+                </div>
+                <button type="submit" class="place-order-btn">Place Order</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Login to Your Account</h2>
+                <button class="close-btn" id="closeModal">&times;</button>
+            </div>
+            <form class="login-form" id="loginForm">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <div class="form-footer">
+                <p>Don't have an account? <a href="#">Sign Up</a></p>
+                <p><a href="#">Forgot Password?</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Flavour Heaven</h3>
+                    <p>Delicious food delivered to your doorstep. Our restaurant offers a wide variety of cuisines to satisfy your cravings.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="#menu">Menu</a>
+                    <a href="#about">About Us</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p>12, Museum Rd,3rd Main Road,</p>
+                    <p>Jayanager, Bangalore - 560011 </p>
+                    <p>Phone: +91 8951353405</p>
+                    <p>Email: shubhabkbelur@gmail.com</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Follow Us</h3>
+                    <p>Stay connected with us on social media for updates and promotions.</p>
+                    <div class="social-links">
+                        <a href="#">FB</a>
+                        <a href="#">IG</a>
+                        <a href="#">TW</a>
+                        <a href="#">YT</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Flavour Heaven Restaurant. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
